@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[9]:
 
 
 import torch
@@ -13,8 +13,7 @@ from torchvision import datasets, transforms
 from enum import Enum
 
 import matplotlib.pyplot as plt
-# TODO this fails:
-#get_ipython().run_line_magic('matplotlib', 'inline')
+get_ipython().run_line_magic('matplotlib', 'inline')
 
 # If quicktest is set, running each notebook section prints something
 Quicktest = True
@@ -51,7 +50,7 @@ if Quicktest == True:
     print(f"mini-batch size: {hp.mbsize}")
 
 
-# In[2]:
+# In[10]:
 
 
 class DataHolder():
@@ -89,7 +88,7 @@ if Quicktest == True:
         break
 
 
-# In[3]:
+# In[11]:
 
 
 # Define the MLP model
@@ -150,7 +149,7 @@ if (Quicktest == True):
     print(mlp.optimizer)
 
 
-# In[4]:
+# In[12]:
 
 
 # Train on MNIST
@@ -160,14 +159,14 @@ for ep in range(5):
     mlp.epoch()
 
 
-# In[5]:
+# In[13]:
 
 
 # Evaluate after initial training
 mlp.evaluate()
 
 
-# In[6]:
+# In[14]:
 
 
 # Now train on KMNIST (Hiragana digits 0..9)
@@ -176,14 +175,14 @@ for ep in range(5):
     mlp.epoch()
 
 
-# In[7]:
+# In[15]:
 
 
 # Evaluate KMNIST after retraining ...
 mlp.evaluate()
 
 
-# In[8]:
+# In[16]:
 
 
 # ... KMNIST is hard. Now, re-evaluate goodness at MNIST (was 96.4%)
